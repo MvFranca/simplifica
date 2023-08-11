@@ -1,0 +1,31 @@
+[
+    {
+        "Título": "O que são vaiáveis?",
+        "Conceito": "O nome “variável” é utilizado por ser um tipo de conteúdo que pode apresentar diferentes valores enquanto o sistema está em execução. Tudo dependerá do comando do usuário e o tipo de operação que é realizado."
+    },
+    {
+        "Título": "Quais são os tipos de variáveis na programação?",
+        "Conceito": [
+            {
+                "subtitulo": "int",
+                "descricao": "As variáveis int são utilizadas para definirem números inteiros. Eles podem ser positivos ou negativos. Porém, não podem incluir números com duas casas decimais."
+            },
+            { 
+                "subtitulo": "double",
+                "descricao": "Elas permitem o armazenamento de números reais, ou seja, com ponto flutuante, mas com precisão dupla."
+            }
+        ]
+    },
+    {
+      
+    },
+    {
+
+    },
+    {
+
+    },
+    {
+
+    }
+]

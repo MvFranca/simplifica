@@ -1,0 +1,12 @@
+[
+    {
+        "conteudo": "Váriáveis",
+        "descricao": "Aprenda o que são variáveis e como elas funcionam.",
+        "id": 1
+    },
+    {
+        "conteudo": "Condicionais",
+        "descricao": "Aprenda o que são condicionais e com utilizá-las.",
+        "id": 2
+    }
+]
