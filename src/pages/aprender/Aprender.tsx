@@ -11,7 +11,7 @@ const Aprender = () => {
   const { id } = useParams();
 
   async function conteudos() {
-    const api = await fetch(`http://127.0.0.1:5173/aprenda/${id}.json`);
+    const api = await fetch(`https://simplificaa.vercel.app/aprenda/${id}.json`);
     const data = await api.json();
     setConteudo(data);
   }

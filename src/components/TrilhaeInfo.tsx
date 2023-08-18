@@ -9,7 +9,7 @@ const TrilhaeInfo = () => {
 
   async function api() {
     const conteudos = await fetch(
-      "http://127.0.0.1:5173/trilha/trilha.json"
+      "https://simplificaa.vercel.app/trilha/trilha.json"
     );
     const data = await conteudos.json();
     setConteudos(data);
