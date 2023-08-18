@@ -3,7 +3,7 @@
         "conteudo": "Váriáveis",
         "descricao": "Aprenda o que são variáveis e como elas funcionam.",
         "id": 1,
-        "src": "/public/trilha/teste.gif"
+        "src": "./trilha/teste.gif"
     },
     {
         "conteudo": "Condicionais",
