@@ -10,7 +10,7 @@ const Jogar = () => {
   const { id } = useParams();
 
   async function conteudos() {
-    const api = await fetch(`https://simplificaa.vercel.app/${id}.json`);
+    const api = await fetch(`https://simplificaa.vercel.app/jogar/${id}.json`);
     const data = await api.json();
     setAssunto(data);
   }
