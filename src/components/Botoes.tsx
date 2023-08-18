@@ -50,15 +50,15 @@ const Botoes = ({ id }: props) => {
           <img src="./cerebro.png" alt="Cérebro" />
         </Link>
 
-        <Link className={`botao1`} id="poucoCurvado">
+        <Link to={''} className={`botao1`} id="poucoCurvado">
           <img src="./bau.png" alt="Baú" />
         </Link>
 
-        <Link className={`botao1`}>
+        <Link to={''} className={`botao1`}>
           <img src="./livro.png" alt="Livro" />
         </Link>
 
-        <Link className={`botao1`}>
+        <Link to={''} className={`botao1`}>
           <img src="./trofeu.png" alt="Troféu" />
         </Link>
       </div>
