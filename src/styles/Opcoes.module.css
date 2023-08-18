@@ -6,7 +6,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  margin: 50px 20px;
+  margin: 20px 20px;
   box-sizing: border-box;
 }
 
@@ -16,7 +16,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-bottom: 20px;
+  background-color: #268bff23;
+  border-radius: 13px;
+  padding: 5px;
   width: 100%;
 }
 
@@ -31,6 +33,10 @@
 .pontuacao div img {
   width: 30px;
   height: 30px;
+}
+
+.estudoManual{
+  margin-top: 30px;
 }
 
 .estudoManual,
@@ -94,10 +100,18 @@
 }
 
 .barraProgresso {
-  background-color: #ffc800;
-  width: 80%;
-  height: 10px;
+  background-color: #E5E5E5;
+  width: 85%;
+  height: 15px;
   border-radius: 30px;
+}
+
+
+.barra{
+  width: 70%;
+  height: 15px;
+  border-radius: 30px;
+  background-color: #268AFF;
 }
 
 .dados {
@@ -110,6 +124,7 @@
   text-align: center;
   width: 100%;
 }
+
 
 @media screen and (max-width: 1280px) {
   .imagens {

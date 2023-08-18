@@ -1,16 +1,17 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import App from "../App";
 import Jogar from "../pages/jogar/Jogar";
+import Home from "../pages/inicio/home";
+import Aprender from "../pages/aprender/Aprender";
 
 const RotasConteudos = () => {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="/jogar" element={<Jogar />} />
-          <Route path={`/jogar/:id`} element={<Jogar/>} />
+          <Route path="/" element={<Home />} />
+          <Route  path={`/aprender/:id`} element={<Aprender/>}/>     
+          <Route path={`/jogar/:id`} element={<Jogar />} />   
         </Routes>
       </BrowserRouter>
     </>

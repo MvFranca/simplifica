@@ -1,11 +1,9 @@
-import Header from "../Header";
-import TrilhaeInfo from "../TrilhaeInfo";
+import MenuTopo from "../MenuTopo";
 
 const Inicio = () => {
   return (
     <>
-      <Header />
-      <TrilhaeInfo />
+     <MenuTopo/>
     </>
   );
 };

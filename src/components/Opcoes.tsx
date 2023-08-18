@@ -2,23 +2,27 @@ import styles from '../styles/Opcoes.module.css'
 
 import IconFire from './icons/IconFire'
 import IconDiamond from './icons/IconDiamond'
-
+import { pointContext } from '../context/context'
+import { useContext } from 'react'
 
 const Opcoes = () => {
+    const {pontos, fogo} = useContext(pointContext)
+
     return(
         <aside className={styles.informacoes}>
 
             <div className={styles.pontuacao}>
             <div>
-               <IconFire width={23} height={23} color="#00000045"/>
+               <IconFire width={23} height={23} color="rgb(255, 126, 66)"/>
                <p>
-                0
+                {fogo}
                </p>
            </div>
             <div>
-                <IconDiamond width={23} height={23} color="rgb(255, 0, 0)"/>
+                <IconDiamond width={23} height={23} 
+                color="rgb(255, 0, 0)"/>
                 <p>
-                    2
+                    {pontos}
                 </p>
             </div>
 
@@ -49,17 +53,20 @@ const Opcoes = () => {
                     <p>
                     Deixe suas dúvidas na comunidade para que monitores possam responder.
                     </p>
+                
                  </div>
+                 <button className={styles.botao}>CLIQUE AQUI PARA ACESSAR</button>
             </div>
             <div className={styles.progresso}>
-                <h2>Seu Progresso</h2>
+                <h2>PROGRESSO</h2>
                 <div className={styles.textos} id={styles.infoComunidade}>
                     <img alt='livro' src={'/bau.png'} width={70} height={70} className={styles.imagens}/>
                     <div className={styles.dados}>
                         <div className={styles.barraProgresso}>
+                            <div className={styles.barra}></div>
                         </div>
                         <p>
-                         20/20XP
+                         15/20XP
                         </p>
                     </div>
                  </div>

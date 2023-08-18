@@ -1,12 +1,11 @@
 import IconClose from "../icons/IconClose";
 
 import styles from "../../styles/Pergunta.module.css";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import OpcoesPergunta from "./opcoesPergunta";
 import { useEffect, useRef, useState } from "react";
 import Acertos from "../acertos/Acertos";
 import { dados } from "../../types/dados";
-
 
 type props = {
   assunto: Array<dados>;
@@ -20,7 +19,7 @@ const Pergunta = ({ assunto, totalQuestions }: props) => {
   const progresso = useRef<HTMLDivElement>(null);
   const alternativas = useRef<HTMLDivElement>(null);
   const [acertos, setAcertos] = useState(0);
-  const [fim, setFim] = useState(false)
+  const [fim, setFim] = useState(false);
 
   const resposta = {
     assinalada: "",
@@ -32,18 +31,37 @@ const Pergunta = ({ assunto, totalQuestions }: props) => {
 
     progresso.current!.style.width = `${Width}%`;
   }
-  
+
   function Assinalada(veracidade: string) {
     resposta.assinalada = veracidade;
-
   }
 
+
+  function limpar(){
+    const inputs = Array.from(alternativas.current!.getElementsByTagName("input"))
+    inputs.map(input => {
+    if(input.checked){
+
+    input.checked = false
+    }
+    })
+  }
+  
   function confirmar() {
+    
+    const inputs = Array.from(alternativas.current!.getElementsByTagName("input"))
+    inputs.map(input => {
+    if(input.checked){
+
     if (resposta.assinalada == "t") {
-        setAcertos(acertos + 1);
+      setAcertos(acertos + 1);
     }
     setPerguntaAtual(perguntaAtual + 1);
     progressBar();
+
+    input.checked = false
+    }
+    })
 
   }
 
@@ -53,19 +71,15 @@ const Pergunta = ({ assunto, totalQuestions }: props) => {
     }
     progressBar();
     setTimeout(() => {
-     setFim(true)
+      setFim(true);
     }, 500);
   }
 
   useEffect(() => {
     progressBar();
-    
+    console.log(assunto);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-
-
-
 
   return (
     <section className={styles.container}>
@@ -79,67 +93,83 @@ const Pergunta = ({ assunto, totalQuestions }: props) => {
           </div>
         </div>
 
-       { !fim ?   <div className={styles.perguntas}>
-          <h2>{assunto[perguntaAtual].pergunta}</h2>
-          <div className={styles.alternativas}>
-      
-            <p
-              ref={alternativas}
-              id="A"
-              onClick={() =>
-                Assinalada(assunto[perguntaAtual].questaoA.veracidade)
-              }
+        {!fim ? (
+          <div className={styles.perguntas}>
+            <h2>{assunto[perguntaAtual].pergunta}</h2>
 
-            >
-              A) {assunto[perguntaAtual].questaoA.texto}
-            </p>
+            <div className={styles.alternativas}  ref={alternativas}>
 
-            <p
-              id="B"
-              ref={alternativas}
-              onClick={() =>
-                Assinalada(assunto[perguntaAtual].questaoB.veracidade)
-              }
-           
-            >
-              B) {assunto[perguntaAtual].questaoB.texto}
-            </p>
+              <div
+                id="A"
+                onClick={() =>
+                  Assinalada(assunto[perguntaAtual].questaoA.veracidade)
+                }
+              >
+    
+                <input type="radio" name="teste" id="a" />
+                <label htmlFor="a">
+                  {assunto[perguntaAtual].questaoA.texto}
+                </label>
 
-            <p
-              id="C"
-              ref={alternativas}
-              onClick={() =>
-                Assinalada(assunto[perguntaAtual].questaoC.veracidade)
-              }
-            >
-              C) {assunto[perguntaAtual].questaoC.texto}
-            </p>
+              </div>
 
-            <p
+              <div
+                id="B"
+                onClick={() =>
+                  Assinalada(assunto[perguntaAtual].questaoB.veracidade)
+                }
+              >
+                
+                <input type="radio" name="teste" id="b" />
+                <label htmlFor="b">
+                  {" "}
+                  {assunto[perguntaAtual].questaoB.texto}
+                </label>
+
+              </div>
+
+              <div
+                id="C"
+                onClick={() =>
+                  Assinalada(assunto[perguntaAtual].questaoC.veracidade)
+                }
+              >
+
+                <input type="radio" name="teste" id="c" />
+                <label htmlFor="c">
+                  {" "}
+                  {assunto[perguntaAtual].questaoC.texto}
+                </label>
+
+              </div>
+
+              <div
               id="D"
-              ref={alternativas}
               onClick={() =>
                 Assinalada(assunto[perguntaAtual].questaoD.veracidade)
-              }
-            >
-              D) {assunto[perguntaAtual].questaoD.texto}
-            </p>
+              }>
+      
+                <input type="radio" name="teste" id="d" />
+                <label htmlFor="d">
+                  {" "}
+                  {assunto[perguntaAtual].questaoD.texto}
+                </label>
+
+              </div>   
+            </div>
           </div>
-        </div>
-      :
-      
-      <Acertos
-      acertos = {acertos}
-      quantidadeQuestoes = {totalQuestions}
-      />
-      } 
-      
+        ) : (
+          <Acertos acertos={acertos} quantidadeQuestoes={totalQuestions} />
+        )}
+
         <OpcoesPergunta
           confirmar={confirmar}
           perguntaAtual={perguntaAtual}
+          setPerguntaAtual={setPerguntaAtual}
           assunto={assunto}
           finalizar={finalizar}
-          fim = {fim}
+          fim={fim}
+          limpar = {limpar}
         />
       </div>
     </section>

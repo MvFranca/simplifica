@@ -6,9 +6,10 @@ type props = {
     conteudo: string;
     descricao: string;
     id: string;
+    src: string;
 }
 
-const Main = ({conteudo, descricao, id}: props) => {
+const Main = ({conteudo, descricao, id, src}: props) => {
     return(
         <main className={styles.container}>
             
@@ -27,7 +28,7 @@ const Main = ({conteudo, descricao, id}: props) => {
                 id ={id}
                 />
                 
-                <img src={'/programador.png'} alt='programador' width={130} height={130}  className={styles.imagem}/>
+                <img src={src} alt='programador' width={260} height={200}  className={styles.imagem}/>
 
             </div>
            

@@ -7,19 +7,32 @@ type props = {
     perguntaAtual: number;
     assunto: Array<dados>;
     finalizar: () => void;
+    setPerguntaAtual: (num: number) => void;
     fim: boolean
+    limpar: () => void;
 }
 
-const OpcoesPergunta = ({confirmar, perguntaAtual, assunto, finalizar, fim}: props) => {
+const OpcoesPergunta = ({confirmar, perguntaAtual, setPerguntaAtual, assunto, finalizar, fim, limpar}: props) => {
 
 
+    function pular(perguntaAtual: number){
+        setPerguntaAtual(perguntaAtual + 1)
+        assunto.push(assunto[perguntaAtual])
+        limpar()
+    }
+
+    console.log(assunto[7])
+    
     return ( 
         <div className={styles.container}>
             <div className={styles.conteudo}>
                 {!fim ? 
                 <>
                     <div>
-                        <a href="#">PULAR</a>
+                        <a onClick={ () => {
+                        pular(perguntaAtual)
+                        }
+                            }>PULAR</a>
                     </div>
                     <div>
                         {

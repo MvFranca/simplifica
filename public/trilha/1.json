@@ -25,21 +25,21 @@
   },
 
 {
-  "pergunta": " Qual a forma correta de se definir uma variável?",
+  "pergunta": " Qual a forma correta de se definir uma variável do tipo 'number'?",
   "questaoA":{
-    "texto": " É o nome utilizado para definir um ou mais valores utilizados pelos programas durante a sua operação.",
-    "veracidade": "t"
-  },
-  "questaoB":{
-    "texto": " São valores que não podem ser modificados.",
+    "texto": " var 10 = num",
     "veracidade": "f"
   },
+  "questaoB":{
+    "texto": " var num = 10",
+    "veracidade": "t"
+  },
   "questaoC":{
-    "texto": " São funções que recebem valores como parâmetros.",
+    "texto": " num = 10",
     "veracidade": "f"
   },
   "questaoD":{
-    "texto": " Variáveis são valores que devem permanecer sempre constantes durante a execução do programa.",
+    "texto": " var num = dez",
     "veracidade": "f"
   }
 },
@@ -47,61 +47,40 @@
 {
   "pergunta": " Qual das alternativas a seguir NÃO está correta?",
   "questaoA":{
-    "texto": " É o nome utilizado para definir um ou mais valores utilizados pelos programas durante a sua operação.",
-    "veracidade": "t"
+    "texto": " Em portugol, as variáveis devem ser sempre inicializadas com um valor inicial.",
+    "veracidade": "f"
   },
   "questaoB":{
-    "texto": " São valores que não podem ser modificados.",
+    "texto": " Uma variável do tipo 'var' pode ter seu valor modificado a qualquer momento.",
     "veracidade": "f"
   },
   "questaoC":{
-    "texto": " São funções que recebem valores como parâmetros.",
-    "veracidade": "f"
+    "texto": " Em portugol, váriaveis do tipo 'booleano' devem sempre iniciar com valor inicial igual a 'falso'.",
+    "veracidade": "t"
   },
   "questaoD":{
-    "texto": " Variáveis são valores que devem permanecer sempre constantes durante a execução do programa.",
+    "texto": " Variáveis possuem diversos tipos diferentes.",
     "veracidade": "f"
   }
 },
 
 {
-  "pergunta": " O que são variáveis?",
+  "pergunta": " Em Portugol, quais das alternativas a seguir contém um tipo de variável que não existe?",
   "questaoA":{
-    "texto": " É o nome utilizado para definir um ou mais valores utilizados pelos programas durante a sua operação.",
+    "texto": " Logico",
     "veracidade": "t"
   },
   "questaoB":{
-    "texto": " São valores que não podem ser modificados.",
+    "texto": " Booleano",
     "veracidade": "f"
   },
   "questaoC":{
-    "texto": " São funções que recebem valores como parâmetros.",
+    "texto": " Inteiro",
     "veracidade": "f"
   },
   "questaoD":{
-    "texto": " Variáveis são valores que devem permanecer sempre constantes durante a execução do programa.",
-    "veracidade": "f"
-  }
-},
-
-{
-  "pergunta": " jkhjkhkk",
-  "questaoA":{
-    "texto": " É o nome utilizado para definir um ou mais valores utilizados pelos programas durante a sua operação.",
-    "veracidade": "t"
-  },
-  "questaoB":{
-    "texto": " São valores que não podem ser modificados.",
-    "veracidade": "f"
-  },
-  "questaoC":{
-    "texto": " São funções que recebem valores como parâmetros.",
-    "veracidade": "f"
-  },
-  "questaoD":{
-    "texto": " Variáveis são valores que devem permanecer sempre constantes durante a execução do programa.",
+    "texto": " Cadeia",
     "veracidade": "f"
   }
 }
-
 ]

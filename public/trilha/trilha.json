@@ -2,11 +2,13 @@
     {
         "conteudo": "Váriáveis",
         "descricao": "Aprenda o que são variáveis e como elas funcionam.",
-        "id": 1
+        "id": 1,
+        "src": "/public/trilha/teste.gif"
     },
     {
         "conteudo": "Condicionais",
         "descricao": "Aprenda o que são condicionais e com utilizá-las.",
-        "id": 2
+        "id": 2,
+        "src": "./trilha/teste2.gif"
     }
 ]

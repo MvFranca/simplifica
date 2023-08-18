@@ -67,7 +67,7 @@
     user-select: auto;
 }
 
-.alternativas p{
+.alternativas label{
     color: #000000;
     box-sizing: border-box;
     border-radius: 10px;
@@ -75,6 +75,11 @@
     transition: 0.2s all;
     cursor: pointer;
  
+}
+
+.alternativas input{
+    padding: 10px;
+    
 }
 
 .alternativas p:hover{

@@ -1,14 +1,11 @@
 import './App.css'
-import MenuTopo from './components/MenuTopo'
-import MenuMobile from './components/menuMobile/MenuMobile'
-import Home from './pages/inicio/home'
+
+import RotasConteudos from './rotas/routes'
 
 function App() {
   return (
     <>
-      <MenuMobile/>
-     <Home/>
-     <MenuTopo/>
+     <RotasConteudos/>
     </>
   )
 }
