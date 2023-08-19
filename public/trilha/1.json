@@ -67,19 +67,19 @@
 {
   "pergunta": " Em Portugol, quais das alternativas a seguir contém um tipo de variável que não existe?",
   "questaoA":{
-    "texto": " Logico",
-    "veracidade": "t"
+    "texto": " Lógico",
+    "veracidade": "f"
   },
   "questaoB":{
-    "texto": " Booleano",
-    "veracidade": "f"
+    "texto": " Nulo",
+    "veracidade": "t"
   },
   "questaoC":{
     "texto": " Inteiro",
     "veracidade": "f"
   },
   "questaoD":{
-    "texto": " Cadeia",
+    "texto": " Real",
     "veracidade": "f"
   }
 }
