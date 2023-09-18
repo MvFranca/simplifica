@@ -7,3 +7,5 @@
 # TELA QUIZ
 ![image](https://github.com/MvFranca/simplifica/assets/111403597/483b5a14-2baf-4a5c-8bb7-88bbcf80b128)
 
+# TELA CONTEÚDO
+![image](https://github.com/MvFranca/simplifica/assets/111403597/4e128129-e3f7-4b55-82b4-ae90d03fe7fa)
