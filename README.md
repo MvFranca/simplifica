@@ -5,4 +5,5 @@
 ![image](https://github.com/MvFranca/simplifica/assets/111403597/186838c3-4478-42fa-870d-94e2c63cf88d)
 
 # TELA QUIZ
-![image](https://github.com/MvFranca/simplifica/assets/111403597/8c01387a-3505-47c2-8a9d-ac3e2f5e279b)
+![image](https://github.com/MvFranca/simplifica/assets/111403597/483b5a14-2baf-4a5c-8bb7-88bbcf80b128)
+
